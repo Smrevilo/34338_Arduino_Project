@@ -14,7 +14,7 @@
 #define readKey "5T4HBV8UA320KO1O"
 #define writeKey "6LEH3V44E0AWFCNK"
 
-// #define DEBUG
+#define DEBUG
 
 /*
  * Main file for 'ESP_Webserver' board.
@@ -126,7 +126,7 @@ void checktemperatureTimer() { // the led task
     ThingSpeak.begin(client);
     client.connect("https://api.thingspeak.com/update?api_key=6LEH3V44E0AWFCNK&field1=0", 80);
     do {
-      ThingSpeak.setField(tempFieldTime, 0);
+      ThingSpeak.setField(tempFieldTime, (long)0);
       ThingSpeak.writeFields(channelID, writeKey);
       #ifdef DEBUG
         Serial.println("Trying to reset manual override...");
@@ -146,7 +146,7 @@ void checkWindowTimer() { // the led task
     ThingSpeak.begin(client);
     client.connect("https://api.thingspeak.com/update?api_key=6LEH3V44E0AWFCNK&field1=0", 80);
     do {
-      ThingSpeak.setField(windowFieldTime, 0);
+      ThingSpeak.setField(windowFieldTime, (long)0);
       ThingSpeak.writeFields(channelID, writeKey);
       #ifdef DEBUG
         Serial.println("Trying to reset manual override...");
@@ -258,8 +258,8 @@ void handleWindow() {
   client.connect("https://api.thingspeak.com/update?api_key=6LEH3V44E0AWFCNK&field1=0", 80);
   String openS = server.arg("open window");
   String timeS = server.arg("time window");
-  int openN = openS.toInt();
-  int timeN = timeS.toInt();
+  long openN = (long)openS.toInt();
+  long timeN = (long)timeS.toInt();
   
   do {
     ThingSpeak.setField(windowFieldValue, openN);
@@ -296,8 +296,8 @@ void handleTemperature() {
   client.connect("https://api.thingspeak.com/update?api_key=6LEH3V44E0AWFCNK&field1=0", 80);
   String openS = server.arg("temp");
   String timeS = server.arg("time temp");
-  int openN = openS.toInt();
-  int timeN = timeS.toInt();
+  long openN = (long)openS.toInt();
+  long timeN = (long)timeS.toInt();
   
   do {
     ThingSpeak.setField(tempFieldValue, openN);
