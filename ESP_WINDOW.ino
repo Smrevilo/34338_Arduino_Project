@@ -1,4 +1,4 @@
-/* Main file for "ESP_WINDOWCONTROL"-board. Board reads data from ThingSpeak and control windows accordingly. 
+/* Main file for "ESP_WINDOW"-board. Board reads data from ThingSpeak and control windows accordingly. 
  *  Read if manual setting is available --> if available, set windows. 
  *  Otherwise uses smart setting windowsts()-->
  *  Read: Humidity, Temperature, Heat Index and CO2 level, and based on given parameters decide how open/closed windows should be.
