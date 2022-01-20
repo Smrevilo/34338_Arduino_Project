@@ -54,16 +54,16 @@ void windowsts(){
     Serial.print("Opening: ");
 
     if (humid > 65||temp > 35 || index > 35|| ir > 2000 ){
-      servo.write(90*2);
+      servo.write(180);
       Serial.println(90);
     } else {
       if (humid > 60||temp > 30 || index > 30|| ir > 1500 ){
-        servo.write(45);
-        Serial.println(45*2);
+        servo.write(90);
+        Serial.println(45);
       } else {
         if (humid > 50||temp > 25 || index > 25|| ir > 1000 ){
-          servo.write(20);
-          Serial.println(20*2);
+          servo.write(40);
+          Serial.println(20);
         } else {
           servo.write(0);
           Serial.println(0);
