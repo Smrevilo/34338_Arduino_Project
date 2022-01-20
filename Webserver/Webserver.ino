@@ -53,9 +53,9 @@ void setup() {
   #endif
   
   // Connect to WiFi network
-  WiFi.begin("Baghus", "Odinsvej-3");
+  WiFi.begin("Filippo Inzaghi", "Maldini68");
   wifiMulti.addAP("IoTFotonik", "Cyberteknologi");  
-  wifiMulti.addAP("Baghus", "Odinsvej-3");
+  wifiMulti.addAP("Filippo Inzaghi", "Maldini68");
 
   #ifdef DEBUG
     Serial.println();
@@ -237,11 +237,15 @@ void handleRoot() {
       <table> \
         <tr> \
             <td> <iframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/apps/matlab_visualizations/443150\"></iframe> </td> \
-            <td> <iframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/1629214/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15\"></iframe> </td> \
+            <td> <iframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/1629214/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=CO_2&type=line&yaxis=PPM\"></iframe> </td> \
         </tr> \
         <tr> \
-            <td> <iframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/1629214/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15\"></iframe> </td> \
-            <td> <iframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/channels/1629214/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15\"></iframe> </td> \
+            <center><td><br><h4>Pie-chart displaying how open the window is.</h4><p>When the whole pie is displayed the window is closed, and when there is no pie the window is open</p></td></center> \
+            <center><td><br><h4>Pie-chart displaying how open the window is.</h4><p>When the whole pie is displayed the window is closed, and when there is no pie the window is open</p></td></center> \
+        </tr> \
+        <tr> \
+            <td> <iframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/apps/matlab_visualizations/444326\"></iframe> </td> \
+            <td> <iframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/apps/matlab_visualizations/444330\"></iframe> </td> \
         </tr> \
       </table> \
       </body></html>");
