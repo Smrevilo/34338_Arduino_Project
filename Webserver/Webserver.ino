@@ -241,7 +241,7 @@ void handleRoot() {
         </tr> \
         <tr> \
             <center><td><br><h4>Pie-chart displaying how open the window is.</h4><p>When the whole pie is displayed the window is closed, and when there is no pie the window is open</p></td></center> \
-            <center><td><br><h4>Pie-chart displaying how open the window is.</h4><p>When the whole pie is displayed the window is closed, and when there is no pie the window is open</p></td></center> \
+            <center><td><br><h4>Pie-chart displaying which setting the thermostat is set as.</h4><p>When the whole pie is displayed the thermostat is at max, and when there is no pie the thermostate is off</p></td></center> \
         </tr> \
         <tr> \
             <td> <iframe width=\"450\" height=\"260\" style=\"border: 1px solid #cccccc;\" src=\"https://thingspeak.com/apps/matlab_visualizations/444326\"></iframe> </td> \

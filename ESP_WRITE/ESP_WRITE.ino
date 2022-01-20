@@ -50,7 +50,7 @@ void loop() {
   measure_data();   // Get data from sensor
   send_data();      // Send data
   print_moniter();  // Print data to moniter
-  delay(60*1000);   // Send interval
+  delay(20*1000);   // Send interval
 }
 
 
